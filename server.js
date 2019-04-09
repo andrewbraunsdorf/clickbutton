@@ -26,4 +26,9 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
+app.post('/clicked', (req, res) => {
+  const click = {clickTime: new Date()};
+  console.log(click);
+  console.log(db);
+});
 console.log('Server Code Running');
